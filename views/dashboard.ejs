@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel - Araf Security</title>
+
+<style>
+body{
+    background:#070707;
+    color:white;
+    font-family:Arial;
+    padding:30px;
+}
+
+h1{
+    color:#ff2f2f;
+}
+
+.card{
+    background:#111;
+    border:1px solid #ff2f2f;
+    border-radius:10px;
+    padding:20px;
+    margin:15px 0;
+}
+
+span{
+    color:#ff2f2f;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Araf Security Admin Panel</h1>
+
+<h2>Gelen Mesajlar</h2>
+
+<% if(messages.length === 0){ %>
+
+<p>Henüz mesaj yok.</p>
+
+<% } %>
+
+
+<% messages.forEach(msg=>{ %>
+
+<div class="card">
+
+<form action="/admin/delete/<%= messages.indexOf(msg) %>" method="POST">
+
+<button style="
+background:#ff2f2f;
+color:white;
+border:none;
+padding:10px;
+border-radius:8px;
+cursor:pointer;
+">
+Mesajı Sil
+</button>
+
+</form>
+
+
+<p><span>Ad:</span> <%= msg.name %></p>
+
+<p><span>E-posta:</span> <%= msg.email %></p>
+
+<p><span>Konu:</span> <%= msg.subject %></p>
+
+<p><span>Mesaj:</span> <%= msg.message %></p>
+
+</div>
+
+<% }) %>
+
+
+</body>
+</html>

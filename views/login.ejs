@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8">
+<title>Admin Giriş - Araf Security</title>
+
+<style>
+
+body{
+    background:#070707;
+    color:white;
+    font-family:Arial;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.box{
+    background:#111;
+    border:1px solid #ff2f2f;
+    padding:40px;
+    border-radius:15px;
+    width:300px;
+    text-align:center;
+}
+
+h1{
+    color:#ff2f2f;
+    margin-bottom:25px;
+}
+
+input{
+    width:90%;
+    padding:12px;
+    margin-bottom:15px;
+    background:#000;
+    color:white;
+    border:1px solid #333;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#ff2f2f;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>Admin Giriş</h1>
+
+<form action="/admin/login" method="POST">
+
+<input 
+type="password" 
+name="password" 
+placeholder="Admin Şifresi"
+required>
+
+<button type="submit">
+Giriş Yap
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
