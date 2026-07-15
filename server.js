@@ -1,3 +1,4 @@
+
 const adminRouter = require("./routes/admin");
 
 const express = require("express");
@@ -19,6 +20,8 @@ app.use(session({
     resave:false,
     saveUninitialized:false
 }));
+
+app.use(adminRouter);
 
 app.set("view engine","ejs");
 

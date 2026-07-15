@@ -44,17 +44,17 @@
 İhtiyacınıza uygun siber güvenlik hizmeti için aşağıdaki formu doldurun.
 </p>
 
-<form class="quote-form">
+<form class="quote-form" action="/iletisim-gonder" method="POST">
 
-<input type="text" placeholder="Şirket Adı" required>
+<input type="text" name="name" placeholder="Şirket Adı" required>
 
-<input type="text" placeholder="Yetkili Kişi" required>
+<input type="text" name="yetkili" placeholder="Yetkili Kişi" required>
 
-<input type="email" placeholder="E-Posta" required>
+<input type="email" name="email" placeholder="E-Posta" required>
 
-<input type="tel" placeholder="Telefon">
+<input type="tel" name="phone" placeholder="Telefon">
 
-<input type="url" placeholder="Web Sitesi">
+<input type="url" name="website" placeholder="Web Sitesi">
 
 <select required>
 
@@ -88,9 +88,9 @@
 <option>5.000.000 - 10.000.000 ₺</option>
 <option>10.000.000 ₺+</option>
 
-</select>
+<select name="service">
 
-<textarea rows="8" placeholder="Projenizi detaylı anlatın..."></textarea>
+<textarea name="message" rows="8" placeholder="Projenizi detaylı anlatın..."></textarea>
 
 <button type="submit">
 Teklif Gönder
